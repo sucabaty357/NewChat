@@ -12,7 +12,6 @@ class ContactsController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Contacts"
         view.backgroundColor = .white
     }
     

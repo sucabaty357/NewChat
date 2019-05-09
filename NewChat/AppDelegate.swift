@@ -21,35 +21,60 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Database.database().isPersistenceEnabled = true
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        var mainController = UIViewController()
-        mainController = GeneralTabBarController()
-        let navigationController = UINavigationController(rootViewController: mainController)
-        navigationController.navigationBar.isTranslucent = false
+        let mainController = GeneralTabBarController()
         
-        self.window?.rootViewController = navigationController
-        self.window?.backgroundColor = .white
+        setTabs(mainController: mainController)
+        
+        self.window?.rootViewController = mainController
         self.window?.makeKeyAndVisible()
-        
-        navigationController.view.alpha = 0
-        DispatchQueue.main.async {
-            if Auth.auth().currentUser == nil {
-                let destination = OnboardingController()
+        self.window?.backgroundColor = .white
+        if Auth.auth().currentUser == nil {
+            let destination = OnboardingController()
                 let newNavigationController = UINavigationController(rootViewController: destination)
-                newNavigationController.navigationBar.backgroundColor = .white
                 let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+                newNavigationController.navigationBar.backgroundColor = .white
                 statusBar.backgroundColor = UIColor.white
-                UINavigationBar.appearance().shadowImage = UIImage()
-                UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+            
+                newNavigationController.navigationBar.shadowImage = UIImage()
+                newNavigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
                 newNavigationController.modalTransitionStyle = .crossDissolve
+                newNavigationController.navigationBar.isTranslucent = false
                 
                 mainController.present(newNavigationController, animated: false, completion: {
-                    navigationController.view.alpha = 1
+                    
                 })
-            } else {
-                navigationController.view.alpha = 1
             }
-        }
         return true
+    }
+    
+    func setTabs(mainController : UITabBarController) {
+        
+        let contactsController = ContactsController()
+        _ = contactsController.view
+        contactsController.title = "Contacts"
+        let contactsNavigationController = UINavigationController(rootViewController: contactsController)
+        
+        let chatsController = ChatsController()
+        _ = chatsController.view
+        chatsController.title = "Chats"
+        let chatsNavigationController = UINavigationController(rootViewController: chatsController)
+        
+        let settingsController = SettingsViewControllersContainer()
+        _ = settingsController.view
+        settingsController.title = "Settings"
+        let settingsNavigationController = UINavigationController(rootViewController: settingsController)
+        
+        
+        let contactsTabItem = UITabBarItem(title: contactsController.title, image: UIImage(named:"TabIconContacts"), selectedImage: UIImage(named:"TabIconContacts_Highlighted"))
+        let chatsTabItem = UITabBarItem(title: chatsController.title, image: UIImage(named:"TabIconMessages"), selectedImage: UIImage(named:"TabIconMessages_Highlighted"))
+        let settingsTabItem = UITabBarItem(title: settingsController.title, image: UIImage(named:"TabIconSettings"), selectedImage: UIImage(named:"TabIconSettings_Highlighted"))
+        contactsController.tabBarItem = contactsTabItem
+        chatsController.tabBarItem = chatsTabItem
+        settingsController.tabBarItem = settingsTabItem
+        
+        let tabBarControllers = [contactsNavigationController, chatsNavigationController, settingsNavigationController]
+        mainController.setViewControllers(tabBarControllers, animated: false)
+        mainController.selectedIndex = tabs.chats.rawValue
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {

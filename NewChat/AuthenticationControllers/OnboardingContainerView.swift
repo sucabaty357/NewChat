@@ -51,7 +51,7 @@ class OnboardingContainerView: UIView {
             logoImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
             logoImageView.heightAnchor.constraint(equalToConstant: deviceScreen.width),
             
-            startMessaging.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
+            startMessaging.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100),
             startMessaging.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             startMessaging.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
             startMessaging.heightAnchor.constraint(equalToConstant: 50),

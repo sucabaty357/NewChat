@@ -16,25 +16,15 @@ class EnterVerificationCodeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
+        view.addSubview(enterVerificationContainerView)
+        enterVerificationContainerView.frame = view.bounds
         configureNavigationBar()
-        setConstraints()
     }
     
-
     fileprivate func configureNavigationBar () {
         let rightBarButton = UIBarButtonItem(title: "Next", style: .done, target: self, action: #selector(rightBarButtonDidTap))
         self.navigationItem.rightBarButtonItem = rightBarButton
         self.title = "Verification"
-    }
-    
-    fileprivate func setConstraints() {
-        
-        view.addSubview(enterVerificationContainerView)
-        enterVerificationContainerView.translatesAutoresizingMaskIntoConstraints = false
-        enterVerificationContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: navigationController!.navigationBar.frame.height).isActive = true
-        enterVerificationContainerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
-        enterVerificationContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-        enterVerificationContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
     }
     
     @objc func rightBarButtonDidTap () {
@@ -55,12 +45,16 @@ class EnterVerificationCodeController: UIViewController {
                 return
             }
             
-            let destination = CreateProfileController()
-            destination.createProfileContainerView.phone.text = self.enterVerificationContainerView.titleNumber.text
+            let destination = UserProfileController()
+            destination.userProfileContainerView.phone.text = self.enterVerificationContainerView.titleNumber.text
             destination.checkIfUserDataExists(completionHandler: { (isCompleted) in
                 if isCompleted {
                     ARSLineProgress.hide()
-                    self.navigationController?.pushViewController(destination, animated: true)
+                    if self.navigationController != nil {
+                        if !(self.navigationController!.topViewController!.isKind(of: UserProfileController.self)) {
+                            self.navigationController?.pushViewController(destination, animated: true)
+                        }
+                    }
                     print("code is correct")
                 }
             })

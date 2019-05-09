@@ -8,8 +8,7 @@
 
 import UIKit
 
-
-extension CreateProfileController {
+extension UserProfileContainerView {
     
     @objc func pictureCaptured() {
         addRoundedEditLayer(to: picker , forCamera: true)

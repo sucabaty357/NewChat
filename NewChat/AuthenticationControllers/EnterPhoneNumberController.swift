@@ -19,8 +19,9 @@ class EnterPhoneNumberController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.white
+        view.addSubview(phoneNumberContainerView)
+        phoneNumberContainerView.frame = view.bounds
         configureNavigationBar()
-        setConstraints()
         setCountry()
     }
     
@@ -32,15 +33,6 @@ class EnterPhoneNumberController: UIViewController {
                 phoneNumberContainerView.selectCountry.setTitle(country["name"], for: .normal)
             }
         }
-    }
-    
-    fileprivate func setConstraints() {
-        view.addSubview(phoneNumberContainerView)
-        phoneNumberContainerView.translatesAutoresizingMaskIntoConstraints = false
-        phoneNumberContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: navigationController!.navigationBar.frame.height).isActive = true
-        phoneNumberContainerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
-        phoneNumberContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-        phoneNumberContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
     }
     
     fileprivate func configureNavigationBar () {

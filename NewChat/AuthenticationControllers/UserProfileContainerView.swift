@@ -1,5 +1,5 @@
 //
-//  CreateProfileContainerView.swift
+//  UserProfileContainerView.swift
 //  NewChat
 //
 //  Created by DuongTrong on 5/9/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateProfileContainerView: UIView, UITextFieldDelegate {
+class UserProfileContainerView: UIView, UITextFieldDelegate {
 
     lazy var profileImageView: UIImageView = {
         let profileImageView = UIImageView()
@@ -59,7 +59,8 @@ class CreateProfileContainerView: UIView, UITextFieldDelegate {
         name.placeholder = "Enter name"
         name.borderStyle = .roundedRect
         name.delegate = self
-        name.returnKeyType = .done
+//        name.returnKeyType = .done
+        name.autocorrectionType = .no
         //verificationCode.addTarget(self, action: #selector(EnterPhoneNumberController.textFieldDidChange(_:)), for: .editingChanged)
         
         return name
@@ -107,6 +108,10 @@ class CreateProfileContainerView: UIView, UITextFieldDelegate {
     //    return placeholderLabel
     //  }()
     
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return true
+//    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -142,11 +147,6 @@ class CreateProfileContainerView: UIView, UITextFieldDelegate {
             subtitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             //  subtitleLabel.widthAnchor.constraint(equalToConstant: 150),
             // subtitleLabel.heightAnchor.constraint(equalToConstant: 150),
-            
-            
-            
-            
-            
             
             name.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 10),
             name.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),

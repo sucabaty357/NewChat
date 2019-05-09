@@ -63,11 +63,13 @@ class AccountSettingsController: UIViewController {
         let destination = OnboardingController()
         
         let newNavigationController = UINavigationController(rootViewController: destination)
-        newNavigationController.navigationBar.backgroundColor = .white
         let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+        newNavigationController.navigationBar.backgroundColor = .white
         statusBar.backgroundColor = UIColor.white
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        newNavigationController.navigationBar.shadowImage = UIImage()
+        newNavigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
+        newNavigationController.navigationBar.isTranslucent = false
         newNavigationController.modalTransitionStyle = .coverVertical
         
         self.present(newNavigationController, animated: true, completion: nil)
@@ -109,14 +111,14 @@ extension AccountSettingsController: UITableViewDataSource {
         
         if indexPath.section == 0 {
             
-            let destination = firstSection[indexPath.row].controller//MessagesController()
+            let destination = firstSection[indexPath.row].controller
             
             self.navigationController?.pushViewController(destination as! UIViewController, animated: true)
         }
         
         if indexPath.section == 1 {
             
-            let destination = secondSection[indexPath.row].controller//MessagesController()
+            let destination = secondSection[indexPath.row].controller
             
             if destination != nil {
                 self.navigationController?.pushViewController(destination!  , animated: true)

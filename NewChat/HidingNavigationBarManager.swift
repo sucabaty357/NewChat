@@ -45,6 +45,7 @@ open class HidingNavigationBarManager: NSObject, UIScrollViewDelegate, UIGesture
     
     open var refreshControl: UIRefreshControl?
     
+//    fileprivate var navBarController: HidingViewController
     fileprivate var navBarController: HidingViewController
     fileprivate var extensionController: HidingViewController
     fileprivate var tabBarController: HidingViewController?
