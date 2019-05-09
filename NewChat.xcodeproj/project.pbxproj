@@ -3,25 +3,107 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		802233DA2283E603005967E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802233D92283E603005967E8 /* AppDelegate.swift */; };
-		802233DC2283E603005967E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802233DB2283E603005967E8 /* ViewController.swift */; };
 		802233DF2283E603005967E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802233DD2283E603005967E8 /* Main.storyboard */; };
 		802233E12283E604005967E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 802233E02283E604005967E8 /* Assets.xcassets */; };
 		802233E42283E604005967E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802233E22283E604005967E8 /* LaunchScreen.storyboard */; };
+		802233EC2283E70C005967E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 802233EB2283E70C005967E8 /* GoogleService-Info.plist */; };
+		802E08372283E8390095BE18 /* GenenalTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802E08362283E8390095BE18 /* GenenalTabBarController.swift */; };
+		802E083A2283EAD70095BE18 /* CountryCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802E08392283EAD70095BE18 /* CountryCodeController.swift */; };
+		802E083C2283EAF40095BE18 /* CreateProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802E083B2283EAF40095BE18 /* CreateProfileController.swift */; };
+		802E083E2283EB5E0095BE18 /* EnterPhoneNumberContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802E083D2283EB5E0095BE18 /* EnterPhoneNumberContainerView.swift */; };
+		802E08402283EBBF0095BE18 /* EnterPhoneNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802E083F2283EBBF0095BE18 /* EnterPhoneNumberController.swift */; };
+		802E08422283EC080095BE18 /* EnterVerificationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802E08412283EC080095BE18 /* EnterVerificationCodeController.swift */; };
+		802E08442283EC4D0095BE18 /* OnboardingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802E08432283EC4D0095BE18 /* OnboardingContainerView.swift */; };
+		802E08462283EC9D0095BE18 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802E08452283EC9D0095BE18 /* OnboardingController.swift */; };
+		802E084B2283F0540095BE18 /* PigeonPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802E084A2283F0540095BE18 /* PigeonPalette.swift */; };
+		802E084D2283F0970095BE18 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802E084C2283F0970095BE18 /* GlobalVariables.swift */; };
+		802E08502283F1340095BE18 /* ChatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802E084F2283F1340095BE18 /* ChatsController.swift */; };
+		802E08532283F16F0095BE18 /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802E08522283F16F0095BE18 /* ContactsController.swift */; };
+		802E08562283F1B10095BE18 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802E08552283F1B10095BE18 /* SettingsController.swift */; };
+		802E08582283F9930095BE18 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802E08572283F9930095BE18 /* Country.swift */; };
+		802E085A2283FADA0095BE18 /* SelectCountryCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802E08592283FADA0095BE18 /* SelectCountryCodeController.swift */; };
+		802E085C2283FBC20095BE18 /* CallingCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 802E085B2283FBC20095BE18 /* CallingCodes.plist */; };
+		802E085E2283FBFC0095BE18 /* HidingNavigationBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802E085D2283FBFC0095BE18 /* HidingNavigationBarManager.swift */; };
+		802E08602283FC310095BE18 /* HidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802E085F2283FC310095BE18 /* HidingViewController.swift */; };
+		80FA8304228406B400C6B0C8 /* EnterVerificationContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA8303228406B400C6B0C8 /* EnterVerificationContainerView.swift */; };
+		80FA830722840A3B00C6B0C8 /* SharedVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA830622840A3B00C6B0C8 /* SharedVariables.swift */; };
+		80FA830922840EFC00C6B0C8 /* CreateProfileContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA830822840EFC00C6B0C8 /* CreateProfileContainerView.swift */; };
+		80FA830B22840F5400C6B0C8 /* CreateProfileController+RoundedEditLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA830A22840F5400C6B0C8 /* CreateProfileController+RoundedEditLayer.swift */; };
+		80FA830D22840F8500C6B0C8 /* CreateProfileController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA830C22840F8500C6B0C8 /* CreateProfileController+handlers.swift */; };
+		80FA830F22840FCE00C6B0C8 /* CreateProfileController+keyboardHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA830E22840FCE00C6B0C8 /* CreateProfileController+keyboardHandlers.swift */; };
+		80FA83112284114500C6B0C8 /* Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA83102284114500C6B0C8 /* Public.swift */; };
+		80FA83132284195400C6B0C8 /* AccountSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA83122284195400C6B0C8 /* AccountSettingsController.swift */; };
+		80FA83152284199D00C6B0C8 /* AccountSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA83142284199D00C6B0C8 /* AccountSettingsTableViewCell.swift */; };
+		80FA8317228419BF00C6B0C8 /* SettingsViewControllersContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA8316228419BF00C6B0C8 /* SettingsViewControllersContainer.swift */; };
+		80FA8319228419E800C6B0C8 /* StorageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA8318228419E800C6B0C8 /* StorageTableViewController.swift */; };
+		80FA831C22841AED00C6B0C8 /* ARSInfiniteLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA831B22841AED00C6B0C8 /* ARSInfiniteLoader.swift */; };
+		80FA831E22841B2600C6B0C8 /* ARSLineProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA831D22841B2600C6B0C8 /* ARSLineProgress.swift */; };
+		80FA832022841B4B00C6B0C8 /* ARSLineProgressConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA831F22841B4B00C6B0C8 /* ARSLineProgressConstants.swift */; };
+		80FA832222841B6600C6B0C8 /* ARSLineProgressCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA832122841B6600C6B0C8 /* ARSLineProgressCustomization.swift */; };
+		80FA832422841B8900C6B0C8 /* ARSLineProgressExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA832322841B8900C6B0C8 /* ARSLineProgressExtensions.swift */; };
+		80FA832622841BA400C6B0C8 /* ARSLineProgressHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA832522841BA400C6B0C8 /* ARSLineProgressHelpers.swift */; };
+		80FA832822841BBE00C6B0C8 /* ARSLinePorgressProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA832722841BBE00C6B0C8 /* ARSLinePorgressProtocols.swift */; };
+		80FA832A22841BF000C6B0C8 /* ARSProgressTypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA832922841BF000C6B0C8 /* ARSProgressTypeAliases.swift */; };
+		80FA832C22841CA900C6B0C8 /* ARSStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA832B22841CA900C6B0C8 /* ARSStatus.swift */; };
+		80FA832E22841D9E00C6B0C8 /* ARSProgressLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FA832D22841D9E00C6B0C8 /* ARSProgressLoader.swift */; };
+		8CFF8F8CDC9786CAF1E027F5 /* Pods_NewChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91DA041BFDA781869FA39BF /* Pods_NewChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		802233D62283E603005967E8 /* NewChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		802233D92283E603005967E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		802233DB2283E603005967E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		802233DE2283E603005967E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		802233E02283E604005967E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		802233E32283E604005967E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		802233E52283E604005967E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		802233EB2283E70C005967E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		802E08362283E8390095BE18 /* GenenalTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenenalTabBarController.swift; sourceTree = "<group>"; };
+		802E08392283EAD70095BE18 /* CountryCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeController.swift; sourceTree = "<group>"; };
+		802E083B2283EAF40095BE18 /* CreateProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileController.swift; sourceTree = "<group>"; };
+		802E083D2283EB5E0095BE18 /* EnterPhoneNumberContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberContainerView.swift; sourceTree = "<group>"; };
+		802E083F2283EBBF0095BE18 /* EnterPhoneNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberController.swift; sourceTree = "<group>"; };
+		802E08412283EC080095BE18 /* EnterVerificationCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterVerificationCodeController.swift; sourceTree = "<group>"; };
+		802E08432283EC4D0095BE18 /* OnboardingContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerView.swift; sourceTree = "<group>"; };
+		802E08452283EC9D0095BE18 /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
+		802E084A2283F0540095BE18 /* PigeonPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PigeonPalette.swift; sourceTree = "<group>"; };
+		802E084C2283F0970095BE18 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		802E084F2283F1340095BE18 /* ChatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsController.swift; sourceTree = "<group>"; };
+		802E08522283F16F0095BE18 /* ContactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
+		802E08552283F1B10095BE18 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		802E08572283F9930095BE18 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		802E08592283FADA0095BE18 /* SelectCountryCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCountryCodeController.swift; sourceTree = "<group>"; };
+		802E085B2283FBC20095BE18 /* CallingCodes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CallingCodes.plist; sourceTree = "<group>"; };
+		802E085D2283FBFC0095BE18 /* HidingNavigationBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HidingNavigationBarManager.swift; sourceTree = "<group>"; };
+		802E085F2283FC310095BE18 /* HidingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HidingViewController.swift; sourceTree = "<group>"; };
+		80FA8303228406B400C6B0C8 /* EnterVerificationContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterVerificationContainerView.swift; sourceTree = "<group>"; };
+		80FA830622840A3B00C6B0C8 /* SharedVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedVariables.swift; sourceTree = "<group>"; };
+		80FA830822840EFC00C6B0C8 /* CreateProfileContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileContainerView.swift; sourceTree = "<group>"; };
+		80FA830A22840F5400C6B0C8 /* CreateProfileController+RoundedEditLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateProfileController+RoundedEditLayer.swift"; sourceTree = "<group>"; };
+		80FA830C22840F8500C6B0C8 /* CreateProfileController+handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateProfileController+handlers.swift"; sourceTree = "<group>"; };
+		80FA830E22840FCE00C6B0C8 /* CreateProfileController+keyboardHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateProfileController+keyboardHandlers.swift"; sourceTree = "<group>"; };
+		80FA83102284114500C6B0C8 /* Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Public.swift; sourceTree = "<group>"; };
+		80FA83122284195400C6B0C8 /* AccountSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsController.swift; sourceTree = "<group>"; };
+		80FA83142284199D00C6B0C8 /* AccountSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		80FA8316228419BF00C6B0C8 /* SettingsViewControllersContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllersContainer.swift; sourceTree = "<group>"; };
+		80FA8318228419E800C6B0C8 /* StorageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTableViewController.swift; sourceTree = "<group>"; };
+		80FA831B22841AED00C6B0C8 /* ARSInfiniteLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSInfiniteLoader.swift; sourceTree = "<group>"; };
+		80FA831D22841B2600C6B0C8 /* ARSLineProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSLineProgress.swift; sourceTree = "<group>"; };
+		80FA831F22841B4B00C6B0C8 /* ARSLineProgressConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSLineProgressConstants.swift; sourceTree = "<group>"; };
+		80FA832122841B6600C6B0C8 /* ARSLineProgressCustomization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSLineProgressCustomization.swift; sourceTree = "<group>"; };
+		80FA832322841B8900C6B0C8 /* ARSLineProgressExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSLineProgressExtensions.swift; sourceTree = "<group>"; };
+		80FA832522841BA400C6B0C8 /* ARSLineProgressHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSLineProgressHelpers.swift; sourceTree = "<group>"; };
+		80FA832722841BBE00C6B0C8 /* ARSLinePorgressProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSLinePorgressProtocols.swift; sourceTree = "<group>"; };
+		80FA832922841BF000C6B0C8 /* ARSProgressTypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSProgressTypeAliases.swift; sourceTree = "<group>"; };
+		80FA832B22841CA900C6B0C8 /* ARSStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSStatus.swift; sourceTree = "<group>"; };
+		80FA832D22841D9E00C6B0C8 /* ARSProgressLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSProgressLoader.swift; sourceTree = "<group>"; };
+		9ACEC63CA0BF0B212CC45A84 /* Pods-NewChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewChat.debug.xcconfig"; path = "Target Support Files/Pods-NewChat/Pods-NewChat.debug.xcconfig"; sourceTree = "<group>"; };
+		A91DA041BFDA781869FA39BF /* Pods_NewChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0A711E90B9BDCC47F4C7B2D /* Pods-NewChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewChat.release.xcconfig"; path = "Target Support Files/Pods-NewChat/Pods-NewChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +111,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CFF8F8CDC9786CAF1E027F5 /* Pods_NewChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E66C309C448C1D3573E2A90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A91DA041BFDA781869FA39BF /* Pods_NewChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		802233CD2283E602005967E8 = {
 			isa = PBXGroup;
 			children = (
 				802233D82283E603005967E8 /* NewChat */,
 				802233D72283E603005967E8 /* Products */,
+				EE224E97C8E420BEEE031A79 /* Pods */,
+				1E66C309C448C1D3573E2A90 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +147,118 @@
 		802233D82283E603005967E8 /* NewChat */ = {
 			isa = PBXGroup;
 			children = (
+				802E08542283F19E0095BE18 /* SettingsControllers */,
+				802E08512283F1540095BE18 /* ContactsControllers */,
+				802E084E2283F10F0095BE18 /* ChatsControllers */,
+				802E08472283F02A0095BE18 /* Support */,
+				802E08382283EA790095BE18 /* AuthenticationControllers */,
 				802233D92283E603005967E8 /* AppDelegate.swift */,
-				802233DB2283E603005967E8 /* ViewController.swift */,
+				802E08362283E8390095BE18 /* GenenalTabBarController.swift */,
 				802233DD2283E603005967E8 /* Main.storyboard */,
 				802233E02283E604005967E8 /* Assets.xcassets */,
 				802233E22283E604005967E8 /* LaunchScreen.storyboard */,
+				802233EB2283E70C005967E8 /* GoogleService-Info.plist */,
 				802233E52283E604005967E8 /* Info.plist */,
+				802E085D2283FBFC0095BE18 /* HidingNavigationBarManager.swift */,
+				802E085F2283FC310095BE18 /* HidingViewController.swift */,
 			);
 			path = NewChat;
+			sourceTree = "<group>";
+		};
+		802E08382283EA790095BE18 /* AuthenticationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				80FA830522840A1400C6B0C8 /* SharedVariables */,
+				802E085B2283FBC20095BE18 /* CallingCodes.plist */,
+				802E08392283EAD70095BE18 /* CountryCodeController.swift */,
+				802E083B2283EAF40095BE18 /* CreateProfileController.swift */,
+				802E083D2283EB5E0095BE18 /* EnterPhoneNumberContainerView.swift */,
+				802E083F2283EBBF0095BE18 /* EnterPhoneNumberController.swift */,
+				802E08412283EC080095BE18 /* EnterVerificationCodeController.swift */,
+				802E08432283EC4D0095BE18 /* OnboardingContainerView.swift */,
+				802E08452283EC9D0095BE18 /* OnboardingController.swift */,
+				802E08572283F9930095BE18 /* Country.swift */,
+				802E08592283FADA0095BE18 /* SelectCountryCodeController.swift */,
+				80FA8303228406B400C6B0C8 /* EnterVerificationContainerView.swift */,
+				80FA830822840EFC00C6B0C8 /* CreateProfileContainerView.swift */,
+				80FA830A22840F5400C6B0C8 /* CreateProfileController+RoundedEditLayer.swift */,
+				80FA830C22840F8500C6B0C8 /* CreateProfileController+handlers.swift */,
+				80FA830E22840FCE00C6B0C8 /* CreateProfileController+keyboardHandlers.swift */,
+			);
+			path = AuthenticationControllers;
+			sourceTree = "<group>";
+		};
+		802E08472283F02A0095BE18 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				80FA831A22841AB900C6B0C8 /* ProgressIndicator */,
+				802E084A2283F0540095BE18 /* PigeonPalette.swift */,
+				802E084C2283F0970095BE18 /* GlobalVariables.swift */,
+				80FA83102284114500C6B0C8 /* Public.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		802E084E2283F10F0095BE18 /* ChatsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				802E084F2283F1340095BE18 /* ChatsController.swift */,
+			);
+			path = ChatsControllers;
+			sourceTree = "<group>";
+		};
+		802E08512283F1540095BE18 /* ContactsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				802E08522283F16F0095BE18 /* ContactsController.swift */,
+			);
+			path = ContactsControllers;
+			sourceTree = "<group>";
+		};
+		802E08542283F19E0095BE18 /* SettingsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				802E08552283F1B10095BE18 /* SettingsController.swift */,
+				80FA83122284195400C6B0C8 /* AccountSettingsController.swift */,
+				80FA83142284199D00C6B0C8 /* AccountSettingsTableViewCell.swift */,
+				80FA8316228419BF00C6B0C8 /* SettingsViewControllersContainer.swift */,
+				80FA8318228419E800C6B0C8 /* StorageTableViewController.swift */,
+			);
+			path = SettingsControllers;
+			sourceTree = "<group>";
+		};
+		80FA830522840A1400C6B0C8 /* SharedVariables */ = {
+			isa = PBXGroup;
+			children = (
+				80FA830622840A3B00C6B0C8 /* SharedVariables.swift */,
+			);
+			path = SharedVariables;
+			sourceTree = "<group>";
+		};
+		80FA831A22841AB900C6B0C8 /* ProgressIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				80FA831B22841AED00C6B0C8 /* ARSInfiniteLoader.swift */,
+				80FA831D22841B2600C6B0C8 /* ARSLineProgress.swift */,
+				80FA831F22841B4B00C6B0C8 /* ARSLineProgressConstants.swift */,
+				80FA832122841B6600C6B0C8 /* ARSLineProgressCustomization.swift */,
+				80FA832322841B8900C6B0C8 /* ARSLineProgressExtensions.swift */,
+				80FA832522841BA400C6B0C8 /* ARSLineProgressHelpers.swift */,
+				80FA832722841BBE00C6B0C8 /* ARSLinePorgressProtocols.swift */,
+				80FA832922841BF000C6B0C8 /* ARSProgressTypeAliases.swift */,
+				80FA832B22841CA900C6B0C8 /* ARSStatus.swift */,
+				80FA832D22841D9E00C6B0C8 /* ARSProgressLoader.swift */,
+			);
+			path = ProgressIndicator;
+			sourceTree = "<group>";
+		};
+		EE224E97C8E420BEEE031A79 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9ACEC63CA0BF0B212CC45A84 /* Pods-NewChat.debug.xcconfig */,
+				F0A711E90B9BDCC47F4C7B2D /* Pods-NewChat.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +268,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 802233E82283E604005967E8 /* Build configuration list for PBXNativeTarget "NewChat" */;
 			buildPhases = (
+				EB9A3B9A32C177824DCF1B8F /* [CP] Check Pods Manifest.lock */,
 				802233D22283E603005967E8 /* Sources */,
 				802233D32283E603005967E8 /* Frameworks */,
 				802233D42283E603005967E8 /* Resources */,
+				7482EF73125ED6717A75F3D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,20 +322,101 @@
 			buildActionMask = 2147483647;
 			files = (
 				802233E42283E604005967E8 /* LaunchScreen.storyboard in Resources */,
+				802233EC2283E70C005967E8 /* GoogleService-Info.plist in Resources */,
 				802233E12283E604005967E8 /* Assets.xcassets in Resources */,
 				802233DF2283E603005967E8 /* Main.storyboard in Resources */,
+				802E085C2283FBC20095BE18 /* CallingCodes.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7482EF73125ED6717A75F3D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewChat/Pods-NewChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewChat/Pods-NewChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NewChat/Pods-NewChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB9A3B9A32C177824DCF1B8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NewChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		802233D22283E603005967E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				802233DC2283E603005967E8 /* ViewController.swift in Sources */,
+				802E083A2283EAD70095BE18 /* CountryCodeController.swift in Sources */,
+				802E08442283EC4D0095BE18 /* OnboardingContainerView.swift in Sources */,
+				802E083E2283EB5E0095BE18 /* EnterPhoneNumberContainerView.swift in Sources */,
+				80FA8319228419E800C6B0C8 /* StorageTableViewController.swift in Sources */,
+				80FA832A22841BF000C6B0C8 /* ARSProgressTypeAliases.swift in Sources */,
+				80FA831E22841B2600C6B0C8 /* ARSLineProgress.swift in Sources */,
+				80FA8317228419BF00C6B0C8 /* SettingsViewControllersContainer.swift in Sources */,
+				802E083C2283EAF40095BE18 /* CreateProfileController.swift in Sources */,
+				802E08422283EC080095BE18 /* EnterVerificationCodeController.swift in Sources */,
+				80FA830922840EFC00C6B0C8 /* CreateProfileContainerView.swift in Sources */,
+				80FA830D22840F8500C6B0C8 /* CreateProfileController+handlers.swift in Sources */,
+				80FA83112284114500C6B0C8 /* Public.swift in Sources */,
+				80FA832C22841CA900C6B0C8 /* ARSStatus.swift in Sources */,
+				80FA830F22840FCE00C6B0C8 /* CreateProfileController+keyboardHandlers.swift in Sources */,
+				80FA831C22841AED00C6B0C8 /* ARSInfiniteLoader.swift in Sources */,
+				802E08372283E8390095BE18 /* GenenalTabBarController.swift in Sources */,
+				80FA83132284195400C6B0C8 /* AccountSettingsController.swift in Sources */,
+				80FA8304228406B400C6B0C8 /* EnterVerificationContainerView.swift in Sources */,
+				802E08532283F16F0095BE18 /* ContactsController.swift in Sources */,
+				80FA830B22840F5400C6B0C8 /* CreateProfileController+RoundedEditLayer.swift in Sources */,
+				80FA832222841B6600C6B0C8 /* ARSLineProgressCustomization.swift in Sources */,
+				80FA830722840A3B00C6B0C8 /* SharedVariables.swift in Sources */,
+				802E084D2283F0970095BE18 /* GlobalVariables.swift in Sources */,
+				80FA832422841B8900C6B0C8 /* ARSLineProgressExtensions.swift in Sources */,
+				802E08402283EBBF0095BE18 /* EnterPhoneNumberController.swift in Sources */,
 				802233DA2283E603005967E8 /* AppDelegate.swift in Sources */,
+				802E08562283F1B10095BE18 /* SettingsController.swift in Sources */,
+				80FA832822841BBE00C6B0C8 /* ARSLinePorgressProtocols.swift in Sources */,
+				80FA832E22841D9E00C6B0C8 /* ARSProgressLoader.swift in Sources */,
+				80FA832622841BA400C6B0C8 /* ARSLineProgressHelpers.swift in Sources */,
+				802E08602283FC310095BE18 /* HidingViewController.swift in Sources */,
+				802E08462283EC9D0095BE18 /* OnboardingController.swift in Sources */,
+				80FA832022841B4B00C6B0C8 /* ARSLineProgressConstants.swift in Sources */,
+				80FA83152284199D00C6B0C8 /* AccountSettingsTableViewCell.swift in Sources */,
+				802E084B2283F0540095BE18 /* PigeonPalette.swift in Sources */,
+				802E085E2283FBFC0095BE18 /* HidingNavigationBarManager.swift in Sources */,
+				802E085A2283FADA0095BE18 /* SelectCountryCodeController.swift in Sources */,
+				802E08582283F9930095BE18 /* Country.swift in Sources */,
+				802E08502283F1340095BE18 /* ChatsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +560,7 @@
 		};
 		802233E92283E604005967E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ACEC63CA0BF0B212CC45A84 /* Pods-NewChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +579,7 @@
 		};
 		802233EA2283E604005967E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0A711E90B9BDCC47F4C7B2D /* Pods-NewChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,58 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        var mainController = UIViewController()
+        mainController = GeneralTabBarController()
+        let navigationController = UINavigationController(rootViewController: mainController)
+        navigationController.navigationBar.isTranslucent = false
+        
+        self.window?.rootViewController = navigationController
+        self.window?.backgroundColor = .white
+        self.window?.makeKeyAndVisible()
+        
+        navigationController.view.alpha = 0
+        DispatchQueue.main.async {
+            if Auth.auth().currentUser == nil {
+                let destination = OnboardingController()
+                let newNavigationController = UINavigationController(rootViewController: destination)
+                newNavigationController.navigationBar.backgroundColor = .white
+                let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+                statusBar.backgroundColor = UIColor.white
+                UINavigationBar.appearance().shadowImage = UIImage()
+                UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+                newNavigationController.modalTransitionStyle = .crossDissolve
+                
+                mainController.present(newNavigationController, animated: false, completion: {
+                    navigationController.view.alpha = 1
+                })
+            } else {
+                navigationController.view.alpha = 1
+            }
+        }
         return true
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        // Pass device token to auth
+        Auth.auth().setAPNSToken(deviceToken, type: AuthAPNSTokenType.prod)
+        
+        // Further handling of the device token if needed by the app
+        // ...
+    }
+    
+    func application(_ application: UIApplication,
+        didReceiveRemoteNotification notification: [AnyHashable : Any],
+        fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        if Auth.auth().canHandleNotification(notification) {
+            completionHandler(UIBackgroundFetchResult.noData)
+            return
+        }
+        
+        // This notification is not auth related, developer should handle it.
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
